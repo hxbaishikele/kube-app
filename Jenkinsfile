@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('test') {
       steps {
-        sh 'echo hello'
+        sh 'docker build -t registry.cn-hangzhou.aliyuncs.com/franktest/kube-app:$BUILD_NUMBER .'
       }
     }
   }
